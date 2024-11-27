@@ -6,14 +6,14 @@
       "use": "@vercel/static"
     },
     {
-      "src": "packages/bot/dist/**",
+      "src": "packages/bot-web-ui/dist/**",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/bot/(.*)",
-      "dest": "/packages/bot/dist/$1"
+      "dest": "/packages/bot-web-ui/dist/$1"
     },
     {
       "src": "/(.*)",
@@ -21,3 +21,4 @@
     }
   ]
 }
+
