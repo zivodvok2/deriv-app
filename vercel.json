@@ -4,9 +4,17 @@
     {
       "src": "packages/core/dist/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "packages/bot/dist/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/bot/(.*)",
+      "dest": "/packages/bot/dist/$1"
+    },
     {
       "src": "/(.*)",
       "dest": "/packages/core/dist/$1"
